@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dc6d9bc1-3533-4788-9428-535263672952" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Tag Library Descriptor" />
+        <option value="Enum" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="true" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaInspector" value="false" />
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectId" id="26Qcu4HkNzJY3kz3AJukGMxITlP" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.37816092" />
+    <property name="settings.editor.selected.configurable" value="preferences.JavaFX" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\d3ivu\OneDrive - Vilniaus Gedimino technikos universitetas\Programavimo technologijos (java)\Kursinis darbas\BookStore\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\d3ivu\OneDrive - Vilniaus Gedimino technikos universitetas\Programavimo technologijos (java)\Kursinis darbas\BookStore\src\NotInUse" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="fxControllers" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.StartGUI">
+    <configuration name="SartHib" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SartHib" />
+      <module name="BookStore" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StartGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StartGUI" />
+      <module name="BookStore" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StartProgram" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StartProgram" />
+      <module name="BookStore" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.StartGUI" />
+      <item itemvalue="Application.StartProgram" />
+      <item itemvalue="Application.SartHib" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StartGUI" />
+        <item itemvalue="Application.SartHib" />
+        <item itemvalue="Application.StartProgram" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc6d9bc1-3533-4788-9428-535263672952" name="Changes" comment="" />
+      <created>1647359480202</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647359480202</updated>
+      <workItem from="1647359481317" duration="5750000" />
+      <workItem from="1647366119964" duration="522000" />
+      <workItem from="1647366735441" duration="3316000" />
+      <workItem from="1647371436096" duration="2801000" />
+      <workItem from="1647422369818" duration="17978000" />
+      <workItem from="1647453973712" duration="7255000" />
+      <workItem from="1647512901870" duration="28021000" />
+      <workItem from="1647597084632" duration="31894000" />
+      <workItem from="1647644979905" duration="634000" />
+      <workItem from="1647677035611" duration="25165000" />
+      <workItem from="1647774168858" duration="1330000" />
+      <workItem from="1647847711201" duration="1725000" />
+      <workItem from="1647963175298" duration="5000" />
+      <workItem from="1648066329224" duration="378000" />
+      <workItem from="1648114832264" duration="59000" />
+      <workItem from="1648118215097" duration="35000" />
+      <workItem from="1648122298425" duration="30000" />
+      <workItem from="1648287899593" duration="35996000" />
+      <workItem from="1648370390861" duration="23868000" />
+      <workItem from="1648399338779" duration="1793000" />
+      <workItem from="1648403077714" duration="522000" />
+      <workItem from="1648407129515" duration="703000" />
+      <workItem from="1648452181406" duration="2888000" />
+      <workItem from="1648456575783" duration="363000" />
+      <workItem from="1649002938836" duration="49000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

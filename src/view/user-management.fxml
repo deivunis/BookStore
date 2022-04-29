@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="546.0" prefWidth="945.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxControllers.UserManagement">
+   <children>
+      <TableView fx:id="usersTable" layoutX="-40.0" layoutY="43.0" prefHeight="546.0" prefWidth="945.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="44.0" text="ID" />
+            <TableColumn fx:id="colLogin" prefWidth="75.0" text="LOGIN" />
+            <TableColumn fx:id="colEmail" prefWidth="75.0" text="EMAIL" />
+            <TableColumn fx:id="colAddress" prefWidth="75.0" text="ADDRESS" />
+            <TableColumn fx:id="colRole" prefWidth="75.0" text="ROLE" />
+            <TableColumn fx:id="colName" prefWidth="75.0" text="NAME" />
+            <TableColumn fx:id="colSurname" prefWidth="75.0" text="SURNAME" />
+            <TableColumn fx:id="colPhoneNumb" prefWidth="75.0" text="PHONE NUMBER" />
+            <TableColumn fx:id="colCeo" prefWidth="75.0" text="CEO" />
+            <TableColumn fx:id="colCompanyTitle" prefWidth="75.0" text="COMPANY TITLE" />
+            <TableColumn fx:id="colRegNumber" prefWidth="75.0" text="REG NUMBER" />
+            <TableColumn fx:id="colVatNumber" prefWidth="75.0" text="VAT NUMBER" />
+            <TableColumn fx:id="colAction" prefWidth="75.0" text="ACTION" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

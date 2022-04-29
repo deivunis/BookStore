@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="587.0" prefWidth="729.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxControllers.MainBookShopPage">
+    <tabs>
+        <Tab fx:id="bookStore" text="Book store">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="548.0" prefWidth="729.0">
+                    <children>
+                        <VBox layoutX="8.0" layoutY="50.0" prefHeight="443.0" prefWidth="355.0">
+                            <children>
+                        <ListView fx:id="productList" onMouseClicked="#loadComments" prefHeight="316.0" prefWidth="611.0" />
+                        <TreeView fx:id="commentsBook" prefHeight="200.0" prefWidth="200.0" />
+                            </children>
+                        </VBox>
+                        <HBox layoutY="2.0" prefHeight="26.0" prefWidth="714.0">
+                            <children>
+                                <TextField fx:id="searchTitle" prefHeight="26.0" prefWidth="145.0" promptText="Search by title" />
+                                <DatePicker fx:id="searchPublish" prefHeight="26.0" prefWidth="145.0" promptText="Search by publish date" />
+                                <TextField fx:id="searchAuthor" prefHeight="26.0" prefWidth="145.0" promptText="Search by author" />
+                                <ComboBox fx:id="searchGenre" prefHeight="26.0" prefWidth="145.0" promptText="Search by genre" />
+                        <Button contentDisplay="TOP" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="140.0" text="Search" />
+                            </children>
+                        </HBox>
+                  <Button layoutX="387.0" layoutY="341.0" mnemonicParsing="false" onAction="#createOrder" prefHeight="25.0" prefWidth="130.0" text="Order" />
+                  <Button layoutX="136.0" layoutY="506.0" mnemonicParsing="false" onAction="#moreDetails" prefHeight="25.0" prefWidth="100.0" text="More details" />
+                  <Button layoutX="263.0" layoutY="506.0" mnemonicParsing="false" onAction="#commentBook" prefHeight="25.0" prefWidth="100.0" text="Comment" />
+                  <Button layoutX="8.0" layoutY="506.0" mnemonicParsing="false" onAction="#addBookToOrder" prefHeight="25.0" prefWidth="100.0" text="Add to cart" />
+                  <ListView fx:id="orderItemsList" layoutX="387.0" layoutY="50.0" prefHeight="281.0" prefWidth="327.0">
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#removeBookFromOrder" text="Remove selected book" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu></ListView>
+                  <Button layoutX="584.0" layoutY="341.0" mnemonicParsing="false" onAction="#clearOrder" prefHeight="25.0" prefWidth="130.0" text="Clear order" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="orderTools" text="Manage Orders">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <HBox layoutX="300.0" layoutY="335.0" prefHeight="26.0" prefWidth="413.0">
+                            <children>
+                                <Button mnemonicParsing="false" onAction="#verifyOrder" prefHeight="26.0" prefWidth="138.0" text="Verify" />
+                                <Button mnemonicParsing="false" onAction="#rejectOrder" prefHeight="26.0" prefWidth="144.0" text="Reject" />
+                                <Button mnemonicParsing="false" onAction="#setProcessing" prefHeight="26.0" prefWidth="136.0" text="Processing" />
+                            </children>
+                        </HBox>
+                  <Button layoutX="14.0" layoutY="508.0" mnemonicParsing="false" onAction="#addToOrderInfoList" prefHeight="25.0" prefWidth="276.0" text="Select order" />
+                  <ListView fx:id="orderList" layoutX="15.0" layoutY="78.0" prefHeight="416.0" prefWidth="275.0" />
+                  <TextArea fx:id="orderInfoList" editable="false" layoutX="301.0" layoutY="14.0" prefHeight="308.0" prefWidth="411.0" />
+                  <DatePicker fx:id="filterByStartDate" layoutX="15.0" layoutY="45.0" onAction="#filterOrders" prefHeight="25.0" prefWidth="130.0" />
+                  <DatePicker fx:id="filterByEndDate" layoutX="157.0" layoutY="45.0" onAction="#filterOrders" prefHeight="25.0" prefWidth="133.0" />
+                  <ComboBox fx:id="filterByStatusF" layoutX="15.0" layoutY="14.0" onAction="#filterOrders" prefWidth="130.0" promptText="Filter by status" />
+                  <TextField fx:id="startPriceF" layoutX="157.0" layoutY="14.0" prefHeight="25.0" prefWidth="67.0" promptText="Start price" />
+                  <TextField fx:id="endPriceF" layoutX="226.0" layoutY="14.0" prefHeight="25.0" prefWidth="63.0" promptText="End price" />
+                    </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab fx:id="booksTools" text="Manage Books">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="449.0" prefWidth="735.0">
+                    <children>
+                        <ListView fx:id="shopBookList" layoutX="14.0" layoutY="25.0" prefHeight="348.0" prefWidth="294.0">
+                            <contextMenu>
+                                <ContextMenu>
+                                    <items>
+                                        <MenuItem fx:id="editItem" mnemonicParsing="false" text="Edit" />
+                                    </items>
+                                    <items>
+                                        <MenuItem fx:id="viewInfoItem" mnemonicParsing="false" text="View Info" />
+                                    </items>
+                                </ContextMenu>
+                            </contextMenu>
+                        </ListView>
+                        <TextField fx:id="bookTitle" layoutX="328.0" layoutY="14.0" prefHeight="26.0" prefWidth="198.0" promptText="Title" />
+                        <TextArea fx:id="bookDesc" layoutX="327.0" layoutY="47.0" prefHeight="178.0" prefWidth="341.0" promptText="Description" />
+                        <ComboBox fx:id="genre" layoutX="542.0" layoutY="14.0" prefHeight="26.0" prefWidth="126.0" promptText="Genre" />
+                        <DatePicker fx:id="pubDate" layoutX="328.0" layoutY="233.0" prefHeight="26.0" prefWidth="186.0" promptText="Publish date" />
+                        <TextField fx:id="pgNum" layoutX="328.0" layoutY="271.0" prefHeight="26.0" prefWidth="186.0" promptText="Page number" />
+                        <TextField fx:id="edition" layoutX="327.0" layoutY="308.0" prefHeight="26.0" prefWidth="188.0" promptText="Edition" />
+                        <TextArea fx:id="authors" layoutX="538.0" layoutY="233.0" prefHeight="101.0" prefWidth="134.0" promptText="Authors" />
+                        <Button layoutX="538.0" layoutY="382.0" mnemonicParsing="false" onAction="#addBook" prefHeight="26.0" prefWidth="134.0" text="Add book to shop" />
+                  <TextField fx:id="priceF" layoutX="328.0" layoutY="347.0" prefHeight="25.0" prefWidth="187.0" promptText="Price" />
+                  <TextField fx:id="salePriceF" layoutX="327.0" layoutY="382.0" prefHeight="25.0" prefWidth="188.0" promptText="Sale price" />
+                  <TextField fx:id="quantityF" layoutX="538.0" layoutY="347.0" prefHeight="25.0" prefWidth="135.0" promptText="Quantity" />
+                  <Button layoutX="14.0" layoutY="383.0" mnemonicParsing="false" onAction="#editBook" prefHeight="25.0" prefWidth="113.0" text="Edit" />
+                  <Button layoutX="195.0" layoutY="382.0" mnemonicParsing="false" onAction="#deleteBook" prefHeight="25.0" prefWidth="113.0" text="Delete" />
+                  <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ID:TITLE:QUANTITY:PRICE:SALE PRICE:PUBLISH DATE" wrappingWidth="284.046875" />
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+      <Tab fx:id="adminTools" text="Admin tools">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Administrator panel">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+                  <TextArea layoutX="14.0" layoutY="39.0" prefHeight="200.0" prefWidth="700.0" promptText="THIS WILL BE SALES INFORMATION" />
+                  <Button layoutX="15.0" layoutY="254.0" mnemonicParsing="false" onAction="#manageUsers" prefHeight="25.0" prefWidth="141.0" text="User management" />
+               </children></AnchorPane>
+        </content>
+      </Tab>
+      <Tab fx:id="myAccount" onSelectionChanged="#updateAccInfoFields" text="My account">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account information">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="365.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My orders">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <ListView fx:id="accOrdersList" layoutX="365.0" layoutY="38.0" prefHeight="245.0" prefWidth="349.0" />
+                  <TextField fx:id="accLoginF" layoutX="14.0" layoutY="55.0" />
+                  <TextField fx:id="accEmailF" layoutX="188.0" layoutY="55.0" />
+                  <Text layoutX="14.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Login name" />
+                  <Text layoutX="188.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+                  <TextField fx:id="accNameF" layoutX="14.0" layoutY="150.0" />
+                  <Text layoutX="14.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+                  <TextField fx:id="accSurnameF" layoutX="14.0" layoutY="196.0" />
+                  <Text layoutX="15.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname" />
+                  <TextField fx:id="accAddressF" layoutX="14.0" layoutY="102.0" prefHeight="25.0" prefWidth="323.0" />
+                  <Text layoutX="14.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address" />
+                  <TextField fx:id="accCompTitleF" layoutX="188.0" layoutY="150.0" />
+                  <TextField fx:id="accCeoF" layoutX="188.0" layoutY="196.0" />
+                  <Text layoutX="188.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company Title" />
+                  <Text layoutX="191.0" layoutY="192.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CEO" />
+                  <TextField fx:id="accRegNumF" layoutX="188.0" layoutY="243.0" />
+                  <Text layoutX="188.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registration number" />
+                  <TextField fx:id="accVatNumF" layoutX="188.0" layoutY="290.0" />
+                  <Text layoutX="191.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VAT number" />
+                  <TextField fx:id="accPhoneNumF" layoutX="14.0" layoutY="243.0" />
+                  <Text layoutX="15.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone number" />
+                  <Text layoutX="15.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birthdate" />
+                  <DatePicker fx:id="accBirthdateF" layoutX="14.0" layoutY="290.0" prefHeight="25.0" prefWidth="152.0" />
+                  <Button layoutX="16.0" layoutY="325.0" mnemonicParsing="false" onAction="#updateAccInfo" prefHeight="25.0" prefWidth="320.0" text="Update information" />
+                  <Text layoutX="16.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change password">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Text>
+                  <PasswordField fx:id="accCurrentPassF" layoutX="17.0" layoutY="406.0" prefHeight="25.0" prefWidth="320.0" />
+                  <Text layoutX="17.0" layoutY="401.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current password" />
+                  <PasswordField fx:id="accNewPassF" layoutX="17.0" layoutY="450.0" prefHeight="25.0" prefWidth="320.0" />
+                  <Text layoutX="17.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New password" />
+                  <PasswordField fx:id="accConfirmPassF" layoutX="17.0" layoutY="495.0" prefHeight="25.0" prefWidth="320.0" />
+                  <Text layoutX="19.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm new password" />
+                  <Button layoutX="17.0" layoutY="528.0" mnemonicParsing="false" onAction="#changeAccPassword" prefHeight="25.0" prefWidth="320.0" text="Change password" />
+               </children>
+            </AnchorPane>
+        </content>
+      </Tab>
+    </tabs>
+</TabPane>
